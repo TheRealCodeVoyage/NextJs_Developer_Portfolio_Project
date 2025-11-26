@@ -2,10 +2,10 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import Image from "next/image";
+import { getProjects } from "@/lib/db";
 
 export default async function ProjectPreviewCard({ numberOfProjects = 3 } = {}) {
-    const res = await fetch('http://localhost:3000/api/projects')
-    const projects = await res.json()
+    const projects = await getProjects().catch(() => []);
     return (
         <div className="flex flex-wrap items-center justify-center bg-stone-50 font-sans dark:bg-black my-4">
             {projects.slice(0, numberOfProjects).map((project, index) => (
