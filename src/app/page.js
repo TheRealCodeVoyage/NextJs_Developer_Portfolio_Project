@@ -1,10 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import MyHero from "@/components/my-hero-section";
 import ProjectPreviewCard from "@/components/project-preview-card";
 import ContactMe from "@/components/contact-me";
 import GitHubCalendarComponent from "@/components/github-calendar";
 
+export const revalidate = 0;
 
 export default function Home() {
   return (
