@@ -1,4 +1,5 @@
 import { Card } from "./ui/card";
+import { Textarea } from "./ui/textarea";
 import Image from "next/image";
 import { Roboto_Mono } from "next/font/google";
 import { getHero } from "@/lib/db";
@@ -52,7 +53,7 @@ export default async function MyHero() {
                 </p>
             </Card>
             <Card className="flex w-full flex-col justify-center p-8 text-center lg:flex-[5]">
-                <h2 className={robotoMono.className}>{longDescription}</h2>
+                <p className={robotoMono.className} >{longDescription}</p>
             </Card>
             
         </div>
